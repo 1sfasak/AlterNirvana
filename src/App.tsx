@@ -9,6 +9,9 @@ import Index from "./pages/Index";
 import News from "./pages/News";
 import Privacy from "./pages/Privacy";
 import VideoSearch from "./pages/VideoSearch";
+import Environment from "./pages/Environment";
+import Psychology from "./pages/Psychology";
+import MythsFacts from "./pages/MythsFacts";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
@@ -24,6 +27,9 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/news" element={<News />} />
+            <Route path="/environment" element={<Environment />} />
+            <Route path="/psychology" element={<Psychology />} />
+            <Route path="/myths-facts" element={<MythsFacts />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/video-search" element={<VideoSearch />} />
             <Route path="/auth" element={<Auth />} />

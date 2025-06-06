@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Newspaper, Shield, Video, LogIn, LogOut, User } from 'lucide-react';
+import { Home, Newspaper, Shield, Video, LogIn, LogOut, User, Leaf, Brain, BookOpen } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { useAuth } from '@/hooks/useAuth';
 
@@ -12,6 +12,9 @@ const Navigation = () => {
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
     { path: '/news', label: 'News', icon: Newspaper },
+    { path: '/environment', label: 'Our Planet', icon: Leaf },
+    { path: '/psychology', label: 'Mind Control', icon: Brain },
+    { path: '/myths-facts', label: 'Truth Check', icon: BookOpen },
     { path: '/privacy', label: 'Privacy', icon: Shield },
     { path: '/video-search', label: 'Video Search', icon: Video },
   ];

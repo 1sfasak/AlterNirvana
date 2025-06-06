@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Filter, Grid, List, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -9,6 +8,9 @@ import AlternativeCard from '@/components/AlternativeCard';
 import FilterSidebar from '@/components/FilterSidebar';
 import Navigation from '@/components/Navigation';
 import NewsPreview from '@/components/NewsPreview';
+import EnvironmentPreview from '@/components/EnvironmentPreview';
+import PsychologyPreview from '@/components/PsychologyPreview';
+import MythsFactsPreview from '@/components/MythsFactsPreview';
 
 // Mock data - in real app this would come from API
 const mockAlternatives = [
@@ -100,6 +102,9 @@ const Index = () => {
         <Navigation />
         <HeroSection onSearch={handleSearch} onOpenWizard={handleOpenWizard} />
         <NewsPreview />
+        <EnvironmentPreview />
+        <PsychologyPreview />
+        <MythsFactsPreview />
       </div>
     );
   }
