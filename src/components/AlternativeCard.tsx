@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Star, Download, ExternalLink, Heart, Compare } from 'lucide-react';
+import { Star, Download, ExternalLink, Heart, GitCompare } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -53,7 +53,7 @@ const AlternativeCard = ({ alternative, onCompare, onViewDetails, isComparing = 
             }}
             className={`glass p-2 ${isComparing ? 'neon-glow' : ''}`}
           >
-            <Compare className="w-4 h-4" />
+            <GitCompare className="w-4 h-4" />
           </Button>
           <Button size="sm" variant="ghost" className="glass p-2">
             <Heart className="w-4 h-4" />
