@@ -1,22 +1,32 @@
-
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Home, Newspaper, Shield, Video, LogIn, LogOut, User, Leaf, Brain, BookOpen } from 'lucide-react';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import {
+  Home,
+  Newspaper,
+  Shield,
+  Video,
+  LogIn,
+  LogOut,
+  User,
+  Leaf,
+  Brain,
+  BookOpen,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from "@/hooks/useAuth";
 
 const Navigation = () => {
   const location = useLocation();
   const { user, signOut } = useAuth();
 
   const navItems = [
-    { path: '/', label: 'Home', icon: Home },
-    { path: '/news', label: 'News', icon: Newspaper },
-    { path: '/environment', label: 'Our Planet', icon: Leaf },
-    { path: '/psychology', label: 'Mind Control', icon: Brain },
-    { path: '/myths-facts', label: 'Truth Check', icon: BookOpen },
-    { path: '/privacy', label: 'Privacy', icon: Shield },
-    { path: '/video-search', label: 'Video Search', icon: Video },
+    { path: "/", label: "Alter", icon: Home },
+    { path: "/news", label: "Whats New", icon: Newspaper },
+    { path: "/environment", label: "Y/our Achivements", icon: Leaf },
+    { path: "/psychology", label: "Mind Control", icon: Brain },
+    { path: "/myths-facts", label: "Myth-Buster", icon: BookOpen },
+    { path: "/privacy", label: "Privacy", icon: Shield },
+    { path: "/video-search", label: "Find-Vid", icon: Video },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -26,9 +36,9 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-xl font-bold text-gradient">
-            AlternativeHub
+            Alter-Nirvana
           </Link>
-          
+
           <div className="flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
@@ -36,8 +46,8 @@ const Navigation = () => {
                 to={item.path}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive(item.path)
-                    ? 'bg-primary/10 text-primary'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-accent'
+                    ? "bg-primary/10 text-primary"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent"
                 }`}
               >
                 <item.icon className="w-4 h-4" />
@@ -65,7 +75,11 @@ const Navigation = () => {
               </div>
             ) : (
               <Link to="/auth">
-                <Button variant="ghost" size="sm" className="flex items-center gap-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex items-center gap-2"
+                >
                   <LogIn className="w-4 h-4" />
                   Sign In
                 </Button>

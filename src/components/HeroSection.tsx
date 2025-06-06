@@ -16,12 +16,15 @@ const HeroSection = ({ onSearch, onOpenWizard }: HeroSectionProps) => {
         {/* Clean Heading */}
         <div className="mb-12">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            Find Better
+            Alter-Nirvana
             <br />
-            <span className="text-primary-soft">Alternatives</span>
+            <span className="block text-2xl md:text-3xl font-medium text-primary-soft mt-2">
+              Break free from limits —
+              <span className="text-green-500"> discover your own path</span>
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Discover open-source and better alternatives to any software or service
+            Explore a world of open-source possibilities and unlock better, empowering alternatives for every need.
           </p>
         </div>
         
