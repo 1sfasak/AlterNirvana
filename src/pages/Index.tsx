@@ -7,6 +7,8 @@ import HeroSection from '@/components/HeroSection';
 import SearchBar from '@/components/SearchBar';
 import AlternativeCard from '@/components/AlternativeCard';
 import FilterSidebar from '@/components/FilterSidebar';
+import Navigation from '@/components/Navigation';
+import NewsPreview from '@/components/NewsPreview';
 
 // Mock data - in real app this would come from API
 const mockAlternatives = [
@@ -95,7 +97,9 @@ const Index = () => {
   if (!showResults) {
     return (
       <div className="min-h-screen">
+        <Navigation />
         <HeroSection onSearch={handleSearch} onOpenWizard={handleOpenWizard} />
+        <NewsPreview />
       </div>
     );
   }
@@ -103,7 +107,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="glass-strong border-b border-border/20 sticky top-0 z-30">
+      <header className="glass border-b border-border/20 sticky top-0 z-30">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -170,14 +174,14 @@ const Index = () => {
             <div className="flex items-center justify-between mb-4">
               <div>
                 <h2 className="text-2xl font-bold mb-2">
-                  Alternatives to <span className="text-neon">{searchQuery}</span>
+                  Alternatives to <span className="text-primary-soft">{searchQuery}</span>
                 </h2>
                 <p className="text-muted-foreground">
                   Found {mockAlternatives.length} alternatives • Sorted by relevance
                 </p>
               </div>
               
-              <Button className="glass neon-border">
+              <Button className="glass">
                 <Sparkles className="w-4 h-4 mr-2" />
                 AI Recommendations
               </Button>
@@ -185,12 +189,12 @@ const Index = () => {
             
             {/* Compare Bar */}
             {compareList.length > 0 && (
-              <div className="floating-card flex items-center justify-between">
+              <div className="clean-card flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <span className="text-sm font-medium">
                     {compareList.length} items selected for comparison
                   </span>
-                  <Button size="sm" className="neon-border">
+                  <Button size="sm">
                     Compare Now
                   </Button>
                 </div>
@@ -225,7 +229,7 @@ const Index = () => {
           
           {/* Load More */}
           <div className="text-center mt-12">
-            <Button className="glass neon-border px-8 py-3">
+            <Button className="glass px-8 py-3">
               Load More Alternatives
             </Button>
           </div>
